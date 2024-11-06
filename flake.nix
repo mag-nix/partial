@@ -12,7 +12,11 @@
       a = self.pkgs.callPackage ./a { };
       b = self.pkgs.callPackage ./b { };
       c = self.pkgs.callPackage ./c { };
-      abc = self.pkgs.callPackage ./abc { };
+      abc = self.pkgs.callPackage ./abc {
+        a = self.packages.x86_64-linux.a;
+        b = self.packages.x86_64-linux.b;
+        c = self.packages.x86_64-linux.c;
+      };
     };
 
     packages.x86_64-linux.default = self.packages.x86_64-linux.a;

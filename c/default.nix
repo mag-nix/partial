@@ -6,6 +6,6 @@ stdenv.mkDerivation {
   phases = [ "unpackPhase" "installPhase" ];
   installPhase = ''
     mkdir -p $out
-    cp $src/data $out
+    cp $src/datc $out
   '';
 }
