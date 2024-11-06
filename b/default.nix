@@ -8,4 +8,4 @@ stdenv.mkDerivation {
     mkdir -p $out
     cp $src/data $out
   '';
-};
+}
