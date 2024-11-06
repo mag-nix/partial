@@ -16,7 +16,7 @@
     pkgs = import nixpkgs { inherit system; };
 
     packages.x86_64-linux = {
-      a = self.pkgs.callPackage (if builtins.pathExists ./a then ./a else upstream + "/a") { }; # renamed z so upstream is used
+      a = self.pkgs.callPackage (if builtins.pathExists ./a then ./a else upstream + "/a") { };
       b = self.pkgs.callPackage (if builtins.pathExists ./b then ./b else upstream + "/b") { };
       c = self.pkgs.callPackage (if builtins.pathExists ./c then ./c else upstream + "/c") { };
       abc = self.pkgs.callPackage (if builtins.pathExists ./abc then ./abc else upstream + "/abc") {
