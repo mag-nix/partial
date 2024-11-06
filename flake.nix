@@ -4,7 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     upstream.url = "github:mag-nix/partial?ref=main";
-    upstream.follows = "nixpkgs";
+    upstream.inputs.nixpkgs.follows = "nixpkgs";
+    upstream.inputs.upstream.follows = "nixpkgs"; # Stop recursion at the first level
   };
   outputs = { self, nixpkgs, upstream }:
   let

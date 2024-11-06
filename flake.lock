@@ -19,9 +19,31 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
+        "upstream": "upstream"
+      }
+    },
+    "upstream": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "upstream": [
           "nixpkgs"
         ]
+      },
+      "locked": {
+        "lastModified": 1730903712,
+        "narHash": "sha256-qfsydFTEML14z19R7Z92j4slCefqFtkJY2LVkAOT5hQ=",
+        "owner": "mag-nix",
+        "repo": "partial",
+        "rev": "e678f117beb26afdda1e3fb7165464ccc84dc30b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mag-nix",
+        "ref": "main",
+        "repo": "partial",
+        "type": "github"
       }
     }
   },
