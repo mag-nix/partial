@@ -4,7 +4,7 @@ let
     name = "nixos-unstable";
     url = "https://github.com/nixos/nixpkgs/archive/4aa36568d413aca0ea84a1684d2d46f55dbabad7.tar.gz";
     sha256 = "sha256-Zwl8YgTVJTEum+L+0zVAWvXAGbWAuXHax3KzuejaDyo=";
-  }) {};
+  }) { system = "x86_64-linux"; };
   upstream = import (builtins.fetchTarball {
     name = "upstream-repo";
     url = "https://github.com/mag-nix/partial/archive/08beac640a63e2ac4ca40a8fdf72ce52dbf0e442.tar.gz";
