@@ -14,15 +14,11 @@ in
 {
   inherit upstream;
   packages = rec {
-  a = if builtins.pathExists ./a then pkgs.callPackage ./a { } else pkgs.callPackage (upstream + "/a") { };
-  b = if builtins.pathExists ./b then pkgs.callPackage ./b { } else pkgs.callPackage (upstream + "/b") { };
-  c = if builtins.pathExists ./c then pkgs.callPackage ./c { } else pkgs.callPackage (upstream + "/c") { };
-  abc = if builtins.pathExists ./abc then pkgs.callPackage ./abc {
-    # not necessary with proper overlay setup
-    a = a;
-    b = b;
-    c = c;
-  } else pkgs.callPackage (upstream + "/abc") {
+  a = pkgs.callPackage (if builtins.pathExists ./a then ./a else upstream + "/a") { };
+  b = pkgs.callPackage (if builtins.pathExists ./b then ./b else upstream + "/b") { };
+  c = pkgs.callPackage (if builtins.pathExists ./c then ./c else upstream + "/c") { };
+  abc = pkgs.callPackage (if builtins.pathExists ./abc then ./abc else upstream + "/abc") {
+    # not necessary not proper yet
     a = a;
     b = b;
     c = c;
