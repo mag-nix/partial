@@ -7,8 +7,8 @@ let
   }) { system = "x86_64-linux"; };
   upstream = builtins.fetchTarball {
     name = "upstream-repo";
-    url = "https://github.com/mag-nix/partial/archive/e678f117beb26afdda1e3fb7165464ccc84dc30b.tar.gz";
-    sha256 = "sha256-qfsydFTEML14z19R7Z92j4slCefqFtkJY2LVkAOT5hQ=";
+    url = "https://github.com/mag-nix/partial/archive/fba7f70561170bc23aec240a4fe94dab4eb152d2.tar.gz";
+    sha256 = "sha256-lUQQiYPuI2mWqnCT/foZWylrrpuUjYQY7GKlTzkn6ZY=";
   };
 in
 {
