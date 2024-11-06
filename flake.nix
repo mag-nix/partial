@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     upstream.url = "github:mag-nix/partial?ref=main";
+    upstream.follows = "nixpkgs";
   };
   outputs = { self, nixpkgs, upstream }:
   let
