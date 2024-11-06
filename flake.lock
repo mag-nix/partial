@@ -48,6 +48,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1730785428,
+        "narHash": "sha256-Zwl8YgTVJTEum+L+0zVAWvXAGbWAuXHax3KzuejaDyo=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "4aa36568d413aca0ea84a1684d2d46f55dbabad7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
@@ -58,6 +74,26 @@
       "inputs": {
         "nixpkgs": "nixpkgs_2",
         "upstream": "upstream_2"
+      },
+      "locked": {
+        "lastModified": 1730891735,
+        "narHash": "sha256-hMyn42VRlJy899wKlRFDmQdjwafvQBxpsHxWb1EPfhQ=",
+        "owner": "mag-nix",
+        "repo": "partial",
+        "rev": "93587608e0be06ca516167cef5b3d6e739934e91",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mag-nix",
+        "ref": "main",
+        "repo": "partial",
+        "type": "github"
+      }
+    },
+    "upstream_2": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3",
+        "upstream": "upstream_3"
       },
       "locked": {
         "lastModified": 1730890899,
@@ -74,9 +110,9 @@
         "type": "github"
       }
     },
-    "upstream_2": {
+    "upstream_3": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "lastModified": 1730890184,
